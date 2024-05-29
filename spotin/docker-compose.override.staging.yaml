@@ -3,8 +3,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    environment:
-      - SPOT_IN_DATABASE_URL=postgresql://${SPOT_IN_DATABASE_USER}:${SPOT_IN_DATABASE_PASSWORD}@postgres:5432/${SPOT_IN_DATABASE_NAME}
 
   postgres:
     container_name: spotin-postgres
