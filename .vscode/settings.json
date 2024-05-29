@@ -1,0 +1,17 @@
+{
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.rulers": [80],
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.renderWhitespace": "all",
+	"files.insertFinalNewline": true,
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "always",
+	"prettier.tabWidth": 2
+}

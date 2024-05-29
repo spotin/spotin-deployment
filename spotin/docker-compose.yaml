@@ -1,0 +1,28 @@
+networks:
+  spotin_network:
+    name: spotin_network
+
+  traefik_network:
+    name: traefik_network
+
+services:
+  spotin:
+    container_name: spotin
+    image: ghcr.io/spotin/spotin:${SPOT_IN_IMAGE_VERSION:-latest}
+    restart: unless-stopped
+    env_file:
+      - spotin.env
+    networks:
+      - traefik_network
+      - spotin_network
+    expose:
+      - 3000
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik_network
+      ## HTTPS
+      - traefik.http.routers.spotin.entrypoints=https
+      - traefik.http.routers.spotin.rule=Host(`${SPOT_IN_FULLY_QUALIFIED_DOMAIN_NAME}`)
+      ## Services
+      - traefik.http.services.spotin.loadbalancer.server.port=4000

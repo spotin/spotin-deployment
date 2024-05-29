@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"EditorConfig.EditorConfig",
+		"GitHub.copilot",
+		"streetsidesoftware.code-spell-checker"
+	]
+}
