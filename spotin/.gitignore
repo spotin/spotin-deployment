@@ -1,5 +1,5 @@
 ## Docker override files
-docker-compose.override.yaml
+compose.override.yaml
 
 ## Docker volumes
 postgres-data

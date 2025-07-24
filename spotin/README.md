@@ -1,4 +1,4 @@
-# Spot in deployment
+# Spot in
 
 ## Start the application for production mode
 
@@ -28,7 +28,7 @@ In a terminal, run the following commands:
 
 ```bash
 # Copy the override file for the staging environment
-cp docker-compose.override.staging.yaml docker-compose.override.yaml
+cp compose.override.staging.yaml compose.override.yaml
 
 # Pull the latest images
 docker compose pull
